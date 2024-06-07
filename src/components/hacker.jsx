@@ -14,7 +14,7 @@ import {
   TableBody,  
  } from '@mui/material';
 
- import { hackerrankAPI } from "../api/axios";
+import { hackerrankAPI } from "../api/axios";
 
 
 export default function HackerApi (){
@@ -26,14 +26,10 @@ const [loading, setLoading] = useState(true);
 
 useEffect(() => {
   
-
-
   hackerrankAPI
     .get(`football_competitions?year=${selectedYear}`)
     .then((result) => setData(result.data))
     // .catch(error => console.error('Error fetching data:', error));
-
-
 
 }, [selectedYear])
 
@@ -44,7 +40,6 @@ if (!data) {
 console.log(data);
   return (
     <>
-    
     <Box>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Age</InputLabel>
@@ -87,11 +82,6 @@ console.log(data);
               </TableBody>
               </Table>
             </TableContainer>
-          {/* {data.map((d, index) => (
-            <div key={index}>
-              <h1>{d.winner}</h1>
-            </div>
-          ))} */}
           </Container>
       </FormControl>
     </Box>

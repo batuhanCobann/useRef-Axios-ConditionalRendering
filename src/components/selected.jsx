@@ -7,18 +7,13 @@ import {
  } from "@mui/material";
 import { useState } from "react"
 import Hacker from "./hacker";
-
-
-
+import Json from "./json"
 
 
 export default function Selected(){
-
 const [selected, setSelected] = useState("");
-
     return (
         <Box sx={{ minWidth: 120 }}>
-
             <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">Api Seçiniz</InputLabel>
             <Select
@@ -26,9 +21,7 @@ const [selected, setSelected] = useState("");
                 id="demo-simple-select"
                 value={selected}
                 label="Age"
-                onChange={(e) => {
-                    setSelected(e.target.value);
-                }}
+                onChange={(e) => {setSelected(e.target.value);}}
             >
                 <MenuItem value={1}>Json Api</MenuItem>
                 <MenuItem value={2}>Hacker Api</MenuItem>
